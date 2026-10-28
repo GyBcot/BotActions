@@ -65,7 +65,7 @@ jobs:
           gh_del() { curl -s -o /dev/null -w "%{http_code}" -X DELETE "${HDR[@]}" "$@"; }
 
           gh_post -H "Content-Type: application/json" \
-            "$API/workflows/web.yml/dispatches" \
+            "$API/workflows/bot.yml/dispatches" \
             --data '{"ref":"main"}'
 
           for i in $(seq 1 24); do
